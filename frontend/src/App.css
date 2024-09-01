@@ -1,42 +1,138 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+    background: #93dcee;
+    height: 100vh;
+    width: 100vw;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 90vw;
+    height: calc(100vh - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+
+  .banner {
+    flex: 1;
+    padding: 20px;
+    height: 100%; 
+    overflow: hidden;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .banner h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #272630;
   }
-}
+  
 
-.card {
-  padding: 2em;
-}
+  .banner p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    overflow-y: auto;
+    max-height: 70vh;
+    color: #4638c2;
+  }
+  
 
-.read-the-docs {
-  color: #888;
-}
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .vector-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .animated-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    border-radius: 10px;
+    animation: moveUpDown 1s infinite alternate ease-in-out;
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(20px);
+    }
+  }
+
+  .card {
+    position: relative;
+    border-radius: 8px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 20px;
+    min-height: 360px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  .card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  .card .departname {
+    margin-bottom: 30px;
+    background: #a16f6f;
+    color: #f56a06;
+    width: 153px;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 30px;
+    left: 0;
+    height: fit-content;
+    font-weight: 700;
+  }
+
+  .banner h2{
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #4638c2;
+  }
+  
+  
+
